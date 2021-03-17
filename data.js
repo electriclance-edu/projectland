@@ -273,7 +273,7 @@ var projects = [
     name:"Da Estorya",
     startDate:"8/3/2021",
     endDate:"ongoing",
-    description:"A little writing experiment where one person writes a page, then another writes the next, and so on, cycling till it is done.",
+    description:"A little writing experiment where one person writes a page, then the second writes the next, then back to the first person, and so on.",
     completeness:"10",
     tags:"story,text",
     effort:"2",
