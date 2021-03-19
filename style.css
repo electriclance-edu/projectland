@@ -1,4 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@media screen and (max-width:1000px) {
+  body #ongoingProjects .project {
+    width:calc(50% - 13px);
+    margin-top:10px;
+  }
+  body #ongoingProjects .project:last-child {
+    width:calc(100% - 13px);
+    margin-top:10px;
+  }
+}
+@media screen and (max-width:600px) {
+  body .center a#ongoingProjects .project {
+    width:100%;
+    margin-right:0;
+    margin-top:10px;
+  }
+}
 body {
   width:100vw;
   height:100vh;
@@ -6,7 +23,7 @@ body {
   background-size:cover;
   background-color:rgb(20,20,55);*/
   background-color:rgb(30,40,55);
-  overflow:hidden;
+  overflow-x:hidden;
   padding:0;
   margin:0;
 }
@@ -23,11 +40,106 @@ body {
 }
 * {
   font-family: 'Varela Round', sans-serif;
-  color:rgb(200,220,255);
+  color:rgb(255,255,255);
+  margin:0;
+  font-size:20px;
 }
 h1 {
   font-size:40px;
   line-height:50px;
   margin:0;
   font-weight:normal;
+}
+.searchBar {
+  position:relative;
+  width:70%;
+  max-width:700px;
+  margin-bottom:50px;
+}
+.searchBar input {
+  background-color:rgb(35,50,65);
+  height:30px;
+  width:100%;
+  border-radius:20px;
+  border:none;
+  outline:none;
+  padding:10px 20px 10px 20px;
+  font-size:20px;
+}
+#searchBarText {
+  left:20px;
+  top:13px;
+  position:absolute;
+  color:rgb(200,200,200);
+}
+.filterButton,.sortsButton {
+  margin-top:5px;
+  padding:5px 20px;
+  border-radius:15px;
+  background-color:rgb(35,50,65);
+  display:inline-block;
+  position:relative;
+}
+.selectedFilters {
+  display:inline-block;
+}
+.filter {
+  height:20px;
+  float:left;
+  display:inline-block;
+  margin-right:10px;
+}
+.filter .circle {
+  width:12px;
+  height:12px;
+  display:inline-block;
+  border-radius:20px;
+  background-color:rgb(255,100,100);
+  position:relative;
+  top:1px;
+}
+.filter p {
+  display:inline-block;
+  font-size:15px;
+}
+.centerer {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%)
+}
+.center {
+  margin-top:20px;
+  width:calc(100% - 40px);
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-right:15px;
+}
+.project {
+  height:100px;
+  width:400px;
+  background-color:rgb(35,50,65);
+  border-radius:20px;
+}
+#featuredProject {
+  height:150px;
+  width:100%;
+  max-width:800px;
+  background-color:rgb(35,50,65);
+  border-radius:20px;
+}
+#featuredProject,#ongoingProjects {
+  margin-bottom:20px;
+}
+#ongoingProjects .project {
+  margin-right:10px;
+  width:calc(33% - 10px);
+  display:inline-block;
+}
+#ongoingProjects .project:last-child {
+  margin-right:0;
+}
+#genericProjects {
+  padding-bottom:50px;
 }

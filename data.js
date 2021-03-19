@@ -7,6 +7,7 @@ var projects = [
     completeness:"60",
     tags:"website,game",
     effort:"1",
+    image:"cakelabs",
     creators:"lance"
   },
   {
@@ -17,6 +18,7 @@ var projects = [
     completeness:"100",
     tags:"language,website,game",
     effort:"1",
+    image:"nihonese",
     creators:"lance"
   },
   {
@@ -27,6 +29,7 @@ var projects = [
     completeness:"5",
     tags:"art,writing",
     effort:"1",
+    image:"deadPeople",
     creators:"lance"
   },
   {
@@ -37,6 +40,7 @@ var projects = [
     completeness:"25",
     tags:"website,game",
     effort:"2",
+    image:"eepos",
     creators:"lance"
   },
   {
@@ -47,6 +51,7 @@ var projects = [
     completeness:"15",
     tags:"website,game",
     effort:"1",
+    image:"icarus",
     creators:"lance"
   },
   {
@@ -57,6 +62,7 @@ var projects = [
     completeness:"50",
     tags:"website,game",
     effort:"2",
+    image:"fishingGame",
     creators:"lance"
   },
   {
@@ -67,6 +73,7 @@ var projects = [
     completeness:"60",
     tags:"website,game",
     effort:"3",
+    image:"particleSim",
     creators:"lance"
   },
   {
@@ -77,6 +84,7 @@ var projects = [
     completeness:"30",
     tags:"website,game",
     effort:"2",
+    image:"burgerStand",
     creators:"lance"
   },
   {
@@ -87,6 +95,7 @@ var projects = [
     completeness:"100",
     tags:"video",
     effort:"1",
+    image:"sterileNeutrinos",
     creators:"lance"
   },
   {
@@ -117,6 +126,7 @@ var projects = [
     completeness:"40",
     tags:"story,text,roleplay",
     effort:"1",
+    image:"kalimba",
     creators:"lance"
   },
   {
@@ -157,6 +167,7 @@ var projects = [
     completeness:"100",
     tags:"art",
     effort:"3",
+    image:"higurashiPoster",
     creators:"lance"
   },
   {
@@ -167,6 +178,7 @@ var projects = [
     completeness:"100",
     tags:"story,text,roleplay,censor",
     effort:"2",
+    image:"ughUgh",
     creators:"lance,lauren,justice"
   },
   {
@@ -207,6 +219,7 @@ var projects = [
     completeness:"100",
     tags:"art",
     effort:"1",
+    image:"aeaEvolutionTree",
     creators:"lance"
   },
   {
@@ -217,6 +230,7 @@ var projects = [
     completeness:"15",
     tags:"art,story,text",
     effort:"2",
+    image:"cookiesAndCrickets",
     creators:"lance"
   },
   {
@@ -237,6 +251,7 @@ var projects = [
     completeness:"10",
     tags:"story,game,website",
     effort:"3",
+    image:"hexagonLand",
     creators:"lance"
   },
   {
@@ -247,6 +262,7 @@ var projects = [
     completeness:"100",
     tags:"art,story",
     effort:"2",
+    image:"starboundComic",
     creators:"lance"
   },
   {
@@ -257,6 +273,7 @@ var projects = [
     completeness:"100",
     tags:"text,story",
     effort:"3",
+    image:"peppaPig",
     creators:"lance"
   },
   {
@@ -267,6 +284,7 @@ var projects = [
     completeness:"10",
     tags:"website",
     effort:"2",
+    image:"projectland",
     creators:"lance,whoever submitted projects"
   },
   {
@@ -291,3 +309,56 @@ var projects = [
   },
 ]
 //date display should be very casual, like the date /~11/2020 would be interpreted as "sometime around november last year"
+
+/*
+
+<div class="sortsButton">
+  <p>Sort by...</p>
+  <div class="sortsList">
+    <div class="filter">
+      <div class="circle"></div>
+      <p>date</p>
+    </div>
+    <div class="filter">
+      <div class="circle"></div>
+      <p>name</p>
+    </div>
+    <div class="filter">
+      <div class="circle"></div>
+      <p>effort</p>
+    </div>
+    <div class="filter">
+      <div class="circle"></div>
+      <p>completeness</p>
+    </div>
+  </div>
+</div>
+<div class="filterButton">
+  <p>Filter by...</p>
+  <div class="filterList">
+    <div id="filterTypes">
+      <p>Tags</p>
+      <div class="filter">
+        <div class="circle"></div>
+        <p>story</p>
+      </div>
+      <div class="filter">
+        <div class="circle"></div>
+        <p>text</p>
+      </div>
+      <div class="filter">
+        <div class="circle"></div>
+        <p>art</p>
+      </div>
+      <div class="filter">
+        <div class="circle"></div>
+        <p>crafts</p>
+      </div>
+    </div> <br>
+    <p>Creators</p>
+    <div id="filterCreators">
+
+    </div>
+  </div>
+</div>
+*/

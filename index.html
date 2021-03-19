@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>default</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="date.js"></script>
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
@@ -12,15 +12,60 @@
       <h1>projectland</h1>
     </div>
     <div class="bottom">
-      <div class="leftSection">
-        <div class="centerer">
-          <div class="searchBar">
-            <input type="text" id="search" value="">
+      <div class="topSection">
+      </div>
+      <div class="center">
+        <div class="searchBar">
+          <p id="searchBarText">Search...</p>
+          <input type="text" id="search" value="" autocomplete="off"> <br>
+          <div class="sortsButton">
+            <p>Sort by...</p>
+            <div class="sorts">
+              <div class="filter">
+                <div class="circle"></div>
+                <p>corelad</p>
+              </div>
+            </div>
+          </div>
+          <div class="filterButton">
+            <p>Filter...</p>
+            <div class="filters">
+
+            </div>
+          </div>
+          <div class="selectedFilters">
+            <div class="filter">
+              <div class="circle"></div>
+              <p>website</p>
+            </div>
+            <div class="filter">
+              <div class="circle"></div>
+              <p>game</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="rightSection">
+        <p>Featured</p>
+        <div id="featuredProject">
 
+        </div>
+        <p>Ongoing</p>
+        <div id="ongoingProjects">
+          <div class="project">
+
+          </div>
+          <div class="project">
+
+          </div>
+          <div class="project">
+
+          </div>
+        </div>
+        <p>Complete/Oof'd</p>
+        <div id="genericProjects">
+          <div class="project">
+
+          </div>
+        </div>
       </div>
     </div>
   </body>
