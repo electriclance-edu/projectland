@@ -4,9 +4,19 @@ bugs
 
 
 colors
-blue theme
--rgb(110,240,255)
+blue - rgb(110,240,255)
+grey - rgb(200,200,200)
+dark blue - rgb(30,40,55)
 
 transitions:
 - normal: 0.3s;
 - fast: 0.2s;
+
+Goal for Today:
+- generate projects automatically
+- fix searching by tag
+- add link data for all projects
+
+modifiable values:
+amountToDisplay at createOngoingProjects()
+    - changes initial amount of ongoingProjects to display when homepage is loaded

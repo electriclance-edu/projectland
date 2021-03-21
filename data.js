@@ -25,9 +25,9 @@ var projects = [
     name:"Dead People Arriving Places",
     startDate:"23/2/2020",
     endDate:"ongoing",
-    description:"Three friends running a galactic pitstop in the middle of nowhere.",
+    description:"Three friends running a pitstop in the middle of galactic nowhere.",
     completeness:"5",
-    tags:"art,writing",
+    tags:"art,story",
     effort:"1",
     image:"deadPeople",
     creators:"lance"
@@ -104,7 +104,7 @@ var projects = [
     endDate:"ongoing",
     description:"Some research logs and spirits chronicling a junior librarian's attempt at commnading plants to do things.",
     completeness:"30",
-    tags:"story,text",
+    tags:"story,mostly-text",
     effort:"2",
     creators:"lance"
   },
@@ -114,7 +114,7 @@ var projects = [
     endDate:"ongoing",
     description:"A terrible conlang. But a pretty good name generator. (name subject to change)",
     completeness:"20",
-    tags:"language,text",
+    tags:"language,mostly-text",
     effort:"2",
     creators:"lance"
   },
@@ -124,7 +124,7 @@ var projects = [
     endDate:"ongoing",
     description:"The story of a quaint little village by a small, quiet sea. Used for an ongoing minecraft roleplay.",
     completeness:"40",
-    tags:"story,text,roleplay",
+    tags:"story,roleplay",
     effort:"1",
     image:"kalimba",
     creators:"lance"
@@ -135,7 +135,7 @@ var projects = [
     endDate:"14/7/2020",
     description:"Drew a few ship designs, made them in cardboard, wrote some lore for them.",
     completeness:"100",
-    tags:"story,text,crafts",
+    tags:"story,mostly-text,crafts",
     effort:"3",
     creators:"lance"
   },
@@ -145,7 +145,7 @@ var projects = [
     endDate:"6/10/2020",
     description:"An intern's story working at the Chromatics Division. There are colors beyond human comprehension.",
     completeness:"5",
-    tags:"story,text",
+    tags:"story,mostly-text",
     effort:"3",
     creators:"lance"
   },
@@ -155,7 +155,7 @@ var projects = [
     endDate:"middle/12/2020",
     description:"A grand nation spanning two galaxies born from the union of two wholly different cultures. Unrelated to Kalimba.",
     completeness:"60",
-    tags:"story,text,roleplay",
+    tags:"story,mostly-text,roleplay",
     effort:"3",
     creators:"lance"
   },
@@ -176,7 +176,7 @@ var projects = [
     endDate:"~4/9/2020",
     description:"(pronounced ASS - ɻçʝxɣχʁħʕhɦ) The Universal Government of Hornies Uterus Go Hard. Beauty incarnate.",
     completeness:"100",
-    tags:"story,text,roleplay,hidden",
+    tags:"story,mostly-text,roleplay,hidden",
     effort:"2",
     image:"ughUgh",
     creators:"lance,lauren,justice"
@@ -197,7 +197,7 @@ var projects = [
     endDate:"/~6/2020",
     description:"Massive creatures walk across an infinite plane, carrying the remnants away from an ever expanding darkness.",
     completeness:"5",
-    tags:"story,text",
+    tags:"story,mostly-text",
     effort:"2",
     creators:"lance"
   },
@@ -207,7 +207,7 @@ var projects = [
     endDate:"hiatus",
     description:"A rebooted version of One Mile because the concept was nice.",
     completeness:"5",
-    tags:"story,text",
+    tags:"story,mostly-text",
     effort:"3",
     creators:"lance"
   },
@@ -228,7 +228,7 @@ var projects = [
     endDate:"24/2/2021",
     description:"A man finds himself alone in a seemingly endless, alien desert.",
     completeness:"15",
-    tags:"art,story,text",
+    tags:"art,story,mostly-text",
     effort:"2",
     image:"cookiesAndCrickets",
     creators:"lance"
@@ -239,7 +239,7 @@ var projects = [
     endDate:"/1/2021",
     description:"Many, many attempts at extending Sam's 'soul' concept.",
     completeness:"30",
-    tags:"story,text",
+    tags:"story,mostly-text",
     effort:"2",
     creators:"lance,sam"
   },
@@ -271,7 +271,7 @@ var projects = [
     endDate:"28/5/2020",
     description:"A tragic tale written in a poetic style reminiscent of the great epics of old.",
     completeness:"100",
-    tags:"text,story",
+    tags:"mostly-text,story",
     effort:"3",
     image:"peppaPig",
     creators:"lance"
@@ -293,7 +293,7 @@ var projects = [
     endDate:"ongoing",
     description:"A little writing experiment where one person writes a page, then the second writes the next, then back to the first person, and so on.",
     completeness:"10",
-    tags:"story,text",
+    tags:"story,mostly-text",
     effort:"2",
     creators:"lance,liam"
   }

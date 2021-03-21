@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>default</title>
+    <title>projectland</title>
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media queries.css">
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
@@ -19,7 +21,7 @@
         <div class="searchBar">
           <div id="selectedTags">
           </div>
-          <img src="images/searchIcon.png">
+          <img src="images/general/searchIcon.png">
           <p id="searchBarText">Search by title/description...</p>
           <input id="searchBar" type="text" id="search" value="" autocomplete="off" onfocus="Search.toggle(true)"> <br>
           <div id="searchBarSuggestions">
@@ -37,50 +39,37 @@
             </div>
           </div>
         </div>
-        <p>Featured</p>
+        <p>This minute's featured project:</p>
         <div id="featuredProject">
-          <img src="images/nihonese.png" alt="featured project image">
+          <img src="images/projects/nihonese.png" alt="featured project image">
           <div class="info">
             <h1>Nihonese</h1>
-            <p>A silly japanese learning tool.</p>
-            <div class="projectTags">
-              <p class="tag greenText smallText">Completed</p>
+            <p class="projectDesc">A silly japanese learning tool.</p>
+            <div class="projectTags smallText">
+              <p class="tag" onclick="Search.addTag(this.innerHTML);Search.search();">language</p>
+              <p class="tag">website</p>
+              <p class="tag">mostly-text</p>
+              <p class="tag">game</p>
+                <p class="tag greenText smallText" onclick="Search.search(this.innerHTML);">Completed</p>
+                <p class="tag greenText smallText" onclick="Search.addTag(this.innerHTML);Search.search();">by lance</p>
             </div>
-            <p class="smallText greyText">Language, Website, Game</p>
           </div>
           <div></div>
         </div>
-        <p>Ongoing</p>
+        <p>Some ongoing projects</p>
         <div id="ongoingProjects">
           <div class="project">
-            <div class="projectTags">
-              <p class="tag blueText smallText">Ongoing</p>
-            </div>
             <h2>Dead People Arriving Places</h2>
-            <p>Three friends running a galactic pitstop in the middle of nowhere.</p>
-          </div>
-          <div class="project">
-            <p class="tag blueText smallText">Ongoing</p>
-            <h2>Experiment #32</h2>
-            <p>Some research logs and spirits chronicling a junior librarian's attempt at commnading plants to do things.</p>
-          </div>
-          <div class="project">
-            <p class="tag blueText smallText">Ongoing</p>
-            <h2>Hurezu Kalii</h2>
-            <p>A terrible conlang. But a pretty good name generator. (name subject to change)</p>
-          </div>
-          <div class="project">
-            <p class="tag blueText smallText">Ongoing</p>
-            <h2>Projectland</h2>
-            <p>A listing of me and my friends' projects.</p>
-          </div>
-          <div class="project">
-            <p class="tag blueText smallText">Ongoing</p>
-            <h2>Da Estorya</h2>
-            <p>A little writing experiment where one person writes a page, then the second writes the next, then back to the first person, and so on.</p>
+            <p class="projectDesc">Three friends running a pitstop in the middle of galactic nowhere.</p>
+            <div class="projectTags smallText">
+              <p class="tag">art</p>
+              <p class="tag">story</p>
+              <p class="tag blueText smallText">Ongoing</p>
+              <p class="tag blueText smallText">by lance</p>
+            </div>
           </div>
         </div>
-        <p class="genericProjectsHeader">Complete/Oof'd</p>
+        <p class="genericProjectsHeader">Complete/oof'd projects</p>
         <div id="genericProjects">
           <div class="project">
 

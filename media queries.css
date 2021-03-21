@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@media screen and (max-width:1200px) {
+  #ongoingProjects .project {
+    width:calc(50% - 19px);
+    margin-top:10px;
+  }
+}
+@media screen and (max-width:800px) {
+  #ongoingProjects .project {
+    width:calc(100% - 6px);
+    margin-right:0;
+    margin-top:10px;
+  }
+}
