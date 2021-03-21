@@ -176,7 +176,7 @@ var projects = [
     endDate:"~4/9/2020",
     description:"(pronounced ASS - ɻçʝxɣχʁħʕhɦ) The Universal Government of Hornies Uterus Go Hard. Beauty incarnate.",
     completeness:"100",
-    tags:"story,text,roleplay,censor",
+    tags:"story,text,roleplay,hidden",
     effort:"2",
     image:"ughUgh",
     creators:"lance,lauren,justice"
@@ -285,7 +285,7 @@ var projects = [
     tags:"website",
     effort:"2",
     image:"projectland",
-    creators:"lance,whoever submitted projects"
+    creators:"lance"
   },
   {
     name:"Da Estorya",
@@ -296,8 +296,8 @@ var projects = [
     tags:"story,text",
     effort:"2",
     creators:"lance,liam"
-  },
-  {
+  }
+  /*{
     name:"default",
     startDate:"day/month/year",
     endDate:"day/month/year",
@@ -306,7 +306,7 @@ var projects = [
     tags:"default,default",
     effort:"default",
     creators:"default"
-  },
+  }*/
 ]
 //date display should be very casual, like the date /~11/2020 would be interpreted as "sometime around november last year"
 

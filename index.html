@@ -7,7 +7,8 @@
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
-  <body>
+  <body onload="onload()">
+    <div class="darkBackground" id="darkBackground" onclick="Search.toggle(false)"></div>
     <div class="topbar">
       <h1>projectland</h1>
     </div>
@@ -16,10 +17,24 @@
       </div>
       <div class="center">
         <div class="searchBar">
-          <p id="searchBarText">Search...</p>
-          <input type="text" id="search" value="" autocomplete="off"> <br>
-          <div class="">
+          <div id="selectedTags">
+          </div>
+          <img src="images/searchIcon.png">
+          <p id="searchBarText">Search by title/description...</p>
+          <input id="searchBar" type="text" id="search" value="" autocomplete="off" onfocus="Search.toggle(true)"> <br>
+          <div id="searchBarSuggestions">
+            <p>Search for tags:</p>
+            <div id="searchTags">
 
+            </div>
+            <p>Search for creators:</p>
+            <div id="searchCreators">
+
+            </div>
+            <p>Sort by:</p>
+            <div id="searchSorts">
+
+            </div>
           </div>
         </div>
         <p>Featured</p>
@@ -28,7 +43,9 @@
           <div class="info">
             <h1>Nihonese</h1>
             <p>A silly japanese learning tool.</p>
-            <p class="tag greenText smallText">Completed</p>
+            <div class="projectTags">
+              <p class="tag greenText smallText">Completed</p>
+            </div>
             <p class="smallText greyText">Language, Website, Game</p>
           </div>
           <div></div>
@@ -36,7 +53,9 @@
         <p>Ongoing</p>
         <div id="ongoingProjects">
           <div class="project">
-            <p class="tag blueText smallText">Ongoing</p>
+            <div class="projectTags">
+              <p class="tag blueText smallText">Ongoing</p>
+            </div>
             <h2>Dead People Arriving Places</h2>
             <p>Three friends running a galactic pitstop in the middle of nowhere.</p>
           </div>
@@ -61,7 +80,7 @@
             <p>A little writing experiment where one person writes a page, then the second writes the next, then back to the first person, and so on.</p>
           </div>
         </div>
-        <p>Complete/Oof'd</p>
+        <p class="genericProjectsHeader">Complete/Oof'd</p>
         <div id="genericProjects">
           <div class="project">
 

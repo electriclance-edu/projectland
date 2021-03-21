@@ -1,2 +1,12 @@
 bugs
 1. jitter with projects on hover
+
+
+
+colors
+blue theme
+-rgb(110,240,255)
+
+transitions:
+- normal: 0.3s;
+- fast: 0.2s;
