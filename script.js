@@ -7,13 +7,14 @@ class ProjectData {
   static initialize() {
     this.tags = this.getUniques("tags");
     this.creators = this.getUniques("creators");
+    this.featurables = this.getProjectsWithPropertyValue("image",["!none"]);
   }
   //getUniques() is a generalized version of a very specific problem that i had to do twice
   static getUniques(property) {
     var uniques = [], i, j, k, progress, potentials;
 
-    for (i = 0; i < projects.length; i++) {
-      potentials = projects[i][property].split(",");
+    for (i = 0; i < ProjectData.rawProjectData.length; i++) {
+      potentials = ProjectData.rawProjectData[i][property].split(",");
       for (j = 0; j < potentials.length; j++) {
         progress = true;
         for (k = 0; k < uniques.length; k++) {
@@ -43,36 +44,80 @@ class ProjectData {
       }
     }
 
-    for (i = 0; i < projects.length; i++) {
-      projectValues = projects[i][property].split(",");
+    for (i = 0; i < ProjectData.rawProjectData.length; i++) {
+      projectValues = ProjectData.rawProjectData[i][property].split(",");
       if (isSuperset(projectValues,values) && !containsAny(projectValues,bannedValues)) {
-        projectsWithValue.push(projects[i]);
+        projectsWithValue.push(ProjectData.rawProjectData[i]);
       }
     }
     return projectsWithValue;
   }
+  static openLink(linkString) {
+    console.log(linkString);
+    if (linkString.slice(0,5) == "https") {
+      window.open(linkString);
+    }
+  }
 }
 class Projects {
   static initializeWebpage() {
-    //this.displayFeaturedProject(ProjectData.potentialFeatures[randNum(ProjectData.potentialFeatures - 1)]);
+    this.displayFeaturedProject(ProjectData.featurables[randNum(ProjectData.featurables.length - 1)]);
     this.createOngoingProjects();
+    this.createInitialProjects();
   }
   static createOngoingProjects() {
     var amountToDisplay = 6, i,
     ongoingProjects = ProjectData.getProjectsWithPropertyValue("endDate",["ongoing"]);
+    shuffleArray(ongoingProjects);
     for (i = 0; i < amountToDisplay; i++) {
-      this.createProjectElement(ongoingProjects[i]);
+      let projectElement = this.createProjectElement(ongoingProjects[i]);
+      document.getElementById("ongoingProjects").appendChild(projectElement);
     }
   }
   static createInitialProjects() {
-
+    var projectsToDisplay = ProjectData.getProjectsWithPropertyValue("endDate",["!ongoing"]);
+    shuffleArray(ongoingProjects);
+    for (var i = 0; i < projectsToDisplay.length; i++) {
+      let projectElement = this.createProjectElement(projectsToDisplay[i]);
+      document.getElementById("genericProjects").appendChild(projectElement);
+    }
   }
   static displayFeaturedProject(projectObject) {
+    var featuredProject = document.getElementById("featuredProject");
+    featuredProject.setAttribute("data-link",projectObject.link);
+    featuredProject.onclick = function() {
+      ProjectData.openLink(this.getAttribute("data-link"));
+    };
+    featuredProject.children[0].src = "images/projects/" + projectObject.image + ".png";
+    featuredProject.children[1].children[0].innerHTML = projectObject.name;
+    featuredProject.children[1].children[1].innerHTML = projectObject.description;
+    let tags = featuredProject.children[1].children[2];
 
+    var tagHeader = document.createElement("p");
+    tagHeader.className = "greyText tagHeader";
+    tagHeader.innerHTML = "tags: ";
+    tags.appendChild(tagHeader);
+    var objectTags = projectObject.tags.split(",");
+    for (var i = 0; i < objectTags.length; i++) {
+      tags.appendChild(Search.createTagElement(objectTags[i]));
+    }
+
+    var creatorHeader = document.createElement("p");
+    creatorHeader.className = "greyText tagHeader";
+    creatorHeader.innerHTML = "creators: ";
+    tags.appendChild(creatorHeader);
+    var objectCreators = projectObject.creators.split(",");
+    for (var i = 0; i < objectCreators.length; i++) {
+      tags.appendChild(Search.createCreatorElement(objectCreators[i]));
+    }
   }
   static createProjectElement(projectObject) {
     var projectElement = document.createElement("div");
     projectElement.className = "project";
+    projectElement.setAttribute("data-link",projectObject.link);
+    projectElement.onclick = function() {
+      ProjectData.openLink(this.getAttribute("data-link"));
+    };
     var title = document.createElement("h2");
     title.innerHTML = projectObject.name;
     var description = document.createElement("p");
@@ -83,7 +128,7 @@ class Projects {
     tags.className = "projectTags smallText";
 
     var tagHeader = document.createElement("p");
-    tagHeader.className = "greyText";
+    tagHeader.className = "greyText tagHeader";
     tagHeader.innerHTML = "tags: ";
     tags.appendChild(tagHeader);
     var objectTags = projectObject.tags.split(",");
@@ -92,7 +137,7 @@ class Projects {
     }
 
     var creatorHeader = document.createElement("p");
-    creatorHeader.className = "greyText";
+    creatorHeader.className = "greyText tagHeader";
     creatorHeader.innerHTML = "creators: ";
     tags.appendChild(creatorHeader);
     var objectCreators = projectObject.creators.split(",");
@@ -103,7 +148,7 @@ class Projects {
     projectElement.appendChild(title);
     projectElement.appendChild(description);
     projectElement.appendChild(tags);
-    document.getElementById("ongoingProjects").appendChild(projectElement);
+    return projectElement;
   }
 }
 class Search {
@@ -148,7 +193,7 @@ class Search {
     var randFactor = creator.charCodeAt(0) + creator.charCodeAt(creator.length - 1);
     var element = document.createElement("p");
     element.className = "tag creator";
-    element.style.backgroundColor = "hsl(" + (randFactor * 20 + randFactor*randFactor*15 + 100) + ",100%,72%)";
+    element.style.backgroundColor = "rgb(110,230,95)";
     element.innerHTML = creator;
     element.onclick = function() {
       Search.addCreator(this.innerHTML);
@@ -171,6 +216,12 @@ class Search {
   }
   static addTag(creator) {
 
+  }
+  static createSpecialTag(tag) {
+    //special tag colors
+
+    //
+    var element = createTagElement(tag);
   }
 }
 function randNum(max) {
@@ -203,6 +254,13 @@ function containsAny(mainArray,bannedElements) {
   }
   return false;
 }
+//https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 /*
 
 deprecated functions
@@ -211,12 +269,5 @@ deprecated functions
 function seededRand(seed,max) {
     var x = Math.sin(seed++) * 10000;
     return Math.round((x - Math.floor(x)) * max);
-}
-//https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
 }
 */

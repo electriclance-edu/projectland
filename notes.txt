@@ -12,10 +12,17 @@ transitions:
 - normal: 0.3s;
 - fast: 0.2s;
 
-Goal for Today:
-- generate projects automatically
+For Today:
+- add "ongoing", "dead", etc. tags to display
+- find a way to make genericProjects look not crap
 - fix searching by tag
-- add link data for all projects
+- fix opening links
+- make it so that you can see new recommendeds
+- add dates
+  //date display should be very casual, like the date /~11/2020 would be interpreted as "sometime around november last year"
+
+For Tomorrow:
+- fix "this minute's featured project" so it actually works
 
 modifiable values:
 amountToDisplay at createOngoingProjects()

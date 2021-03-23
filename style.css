@@ -132,7 +132,6 @@ h2 {
 }
 .project {
   height:100px;
-  width:500px;
   background-color:rgb(35,50,65);
   border-radius:20px;
   padding:10px;
@@ -140,10 +139,23 @@ h2 {
   position:relative;
   margin-top:10px;
   opacity:0;
-  top:0;
   animation:fadeIn 0.5s;
   animation-fill-mode:forwards;
   overflow:hidden;
+  display:inline-block;
+}
+.project {
+  transform:translate(0px,0px);
+  transition:0.3s transform, 0.3s box-shadow;
+}
+.project:hover {
+  transform:translate(-3px,-3px);
+  box-shadow:3px 3px rgb(110,240,255);
+}
+.project:active {
+  transform:translate(0px,0px);
+  transition:0s transition, 0s box-shadow;
+  box-shadow:0px 0px;
 }
 .project h2 {
   white-space:nowrap;
@@ -174,11 +186,22 @@ h2 {
   overflow:hidden;
   top:3px;
 }
+.projectTags .tagHeader {
+  font-size:0;
+  margin-right:0;
+  transition:0.3s;
+}
 .project:hover .tag {
   padding:1px 10px;
   width:initial;
-  color:initial;
+  color:rgb(30,40,55);
   top:4.4px;
+}
+.project:hover .tagHeader {
+  display:inline-block;
+  font-size:12px;
+  transition:0.3s;
+  margin-right:5px;
 }
 #featuredProject {
   height:150px;
@@ -188,22 +211,7 @@ h2 {
   border-radius:20px;
   white-space:nowrap;
   position:relative;
-}
-#featuredProject,.project {
-  top:0;
-  left:0;
-  transition:0.3s top, 0.3s left, 0.3s box-shadow;
-}
-#featuredProject:hover, .project:hover {
-  top:-3px;
-  left:-3px;
-  box-shadow:3px 3px rgb(110,240,255);
-}
-#featuredProject:active, .project:active {
-  top:0;
-  left:0;
-  transition:0s top, 0s left, 0s box-shadow;
-  box-shadow:0px 0px;
+  overflow:hidden;
 }
 #featuredProject > img {
   display:inline-block;
@@ -223,6 +231,11 @@ h2 {
   left:300px;
   padding:10px;
   box-sizing:border-box;
+}
+#featuredProject .info h1 {
+  width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 #featuredProject .info > p:nth-last-child(3) {
   /*https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css*/
@@ -244,6 +257,7 @@ h2 {
   width:20px;
   position:absolute;
   left:280px;
+  top:0;
 }
 #featuredProject > div > p {
   white-space:normal;
@@ -261,6 +275,10 @@ h2 {
 }
 #genericProjects {
   padding-bottom:50px;
+}
+#genericProjects .project {
+  width:calc(50% - 10px);
+  margin-right:5px;
 }
 .genericProjectsHeader {
   clear:left;

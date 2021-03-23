@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media queries.css">
-    <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="data.js"></script>
   </head>
   <body onload="onload()">
     <div class="darkBackground" id="darkBackground" onclick="Search.toggle(false)"></div>
@@ -39,41 +39,22 @@
             </div>
           </div>
         </div>
-        <p>This minute's featured project:</p>
-        <div id="featuredProject">
-          <img src="images/projects/nihonese.png" alt="featured project image">
+        <p>Featured project:</p>
+        <div id="featuredProject" class="project">
+          <img src="" alt="featured project image">
           <div class="info">
             <h1>Nihonese</h1>
             <p class="projectDesc">A silly japanese learning tool.</p>
             <div class="projectTags smallText">
-              <p class="tag" onclick="Search.addTag(this.innerHTML);Search.search();">language</p>
-              <p class="tag">website</p>
-              <p class="tag">mostly-text</p>
-              <p class="tag">game</p>
-                <p class="tag greenText smallText" onclick="Search.search(this.innerHTML);">Completed</p>
-                <p class="tag greenText smallText" onclick="Search.addTag(this.innerHTML);Search.search();">by lance</p>
             </div>
           </div>
           <div></div>
         </div>
         <p>Some ongoing projects</p>
         <div id="ongoingProjects">
-          <div class="project">
-            <h2>Dead People Arriving Places</h2>
-            <p class="projectDesc">Three friends running a pitstop in the middle of galactic nowhere.</p>
-            <div class="projectTags smallText">
-              <p class="tag">art</p>
-              <p class="tag">story</p>
-              <p class="tag blueText smallText">Ongoing</p>
-              <p class="tag blueText smallText">by lance</p>
-            </div>
-          </div>
         </div>
         <p class="genericProjectsHeader">Complete/oof'd projects</p>
         <div id="genericProjects">
-          <div class="project">
-
-          </div>
         </div>
       </div>
     </div>
