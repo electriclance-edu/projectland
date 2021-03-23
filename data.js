@@ -418,5 +418,17 @@ ProjectData.rawProjectData = [
     image:"none",
     creators:"lance,liam",
     link:"https://docs.google.com/document/d/1vSWMK33nYllq32JHiF209JsOId_qluG8qRrDfSzIqfc/edit?usp=sharing"
+  },
+  {
+    name:"Kimispeak",
+    startDate:"2/21/2021",
+    endDate:"ongoing",
+    description:"Kimi constructs a conlang.",
+    completeness:"33",
+    tags:"language,mostly-text",
+    effort:"1",
+    image:"none",
+    creators:"kimi",
+    link:"https://docs.google.com/document/d/14XHU_LeWukb6oihR0ZInZLNQDf0YxU3jZzwcQaNuvD8/edit?usp=sharing"
   }
 ]
