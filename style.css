@@ -20,9 +20,6 @@ body {
   transition:0.2s opacity;
   pointer-events:none;
 }
-.darkBackground:hover {
-  opacity:0;
-}
 .topbar {
   position:relative;
   width:100%;
@@ -72,7 +69,7 @@ h2 {
   background-color:rgb(255,0,0,0.3);
   transform:translatey(-100%);
   overflow:hidden;
-  white-space:
+  white-space:nowrap;
 }
 .searchBar input {
   background-color:rgb(35,50,65);
@@ -143,14 +140,8 @@ h2 {
   animation-fill-mode:forwards;
   overflow:hidden;
   display:inline-block;
-}
-.project {
   transform:translate(0px,0px);
   transition:0.3s transform, 0.3s box-shadow;
-}
-.project:hover {
-  transform:translate(-3px,-3px);
-  box-shadow:3px 3px rgb(110,240,255);
 }
 .project:active {
   transform:translate(0px,0px);
@@ -191,19 +182,7 @@ h2 {
   margin-right:0;
   transition:0.3s;
 }
-.project:hover .tag {
-  padding:1px 10px;
-  width:initial;
-  color:rgb(30,40,55);
-  top:4.4px;
-}
-.project:hover .tagHeader {
-  display:inline-block;
-  font-size:12px;
-  transition:0.3s;
-  margin-right:5px;
-}
-#featuredProject {
+.featuredProject {
   height:150px;
   width:calc(100% - 5px);
   max-width:800px;
@@ -213,7 +192,7 @@ h2 {
   position:relative;
   overflow:hidden;
 }
-#featuredProject > img {
+.featuredProject > img {
   display:inline-block;
   height:150px;
   width:300px;
@@ -222,7 +201,7 @@ h2 {
   left:0;
   border-radius:20px 0 0 20px;
 }
-#featuredProject .info {
+.featuredProject .info {
   display:inline-block;
   height:100%;
   width:calc(100% - 300px);
@@ -232,12 +211,12 @@ h2 {
   padding:10px;
   box-sizing:border-box;
 }
-#featuredProject .info h1 {
+.featuredProject .info h1 {
   width:100%;
   overflow:hidden;
   text-overflow:ellipsis;
 }
-#featuredProject .info > p:nth-last-child(3) {
+.featuredProject .info > p:nth-last-child(3) {
   /*https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css*/
   overflow:hidden;
   text-overflow:ellipsis;
@@ -245,13 +224,13 @@ h2 {
   -webkit-line-clamp:3;
   -webkit-box-orient:vertical;
 }
-#featuredProject .info > p:last-child {
+.featuredProject .info > p:last-child {
   position:absolute;
   bottom:10px;
   right:10px;
   white-space:nowrap;
 }
-#featuredProject > div:last-child {
+.featuredProject > div:last-child {
   background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(35,50,65,1) 100%);
   height:100%;
   width:20px;
@@ -259,10 +238,10 @@ h2 {
   left:280px;
   top:0;
 }
-#featuredProject > div > p {
+.featuredProject > div > p {
   white-space:normal;
 }
-#featuredProject,#ongoingProjects {
+.featuredProject,#ongoingProjects {
   margin-bottom:20px;
 }
 #ongoingProjects .project {
@@ -276,14 +255,18 @@ h2 {
 #genericProjects {
   padding-bottom:50px;
 }
-#genericProjects .project {
-  width:calc(50% - 10px);
+.projectAltForm .project {
+  width:calc(50% - 20px);
+  height:80px;
+  float:left;
+  padding-bottom:30px;
   margin-right:5px;
 }
-.genericProjectsHeader {
-  clear:left;
-  margin-top:20px;
-}
+
+
+
+
+
 
 
 

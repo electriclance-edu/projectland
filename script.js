@@ -45,6 +45,7 @@ class ProjectData {
     }
 
     for (i = 0; i < ProjectData.rawProjectData.length; i++) {
+      //console.log(ProjectData.rawProjectData[i].name + " " + property);
       projectValues = ProjectData.rawProjectData[i][property].split(",");
       if (isSuperset(projectValues,values) && !containsAny(projectValues,bannedValues)) {
         projectsWithValue.push(ProjectData.rawProjectData[i]);
@@ -66,8 +67,11 @@ class Projects {
     this.createInitialProjects();
   }
   static createOngoingProjects() {
-    var amountToDisplay = 6, i,
+    var i,
     ongoingProjects = ProjectData.getProjectsWithPropertyValue("endDate",["ongoing"]);
+
+    var amountToDisplay = ongoingProjects.length;
+
     shuffleArray(ongoingProjects);
     for (i = 0; i < amountToDisplay; i++) {
       let projectElement = this.createProjectElement(ongoingProjects[i]);

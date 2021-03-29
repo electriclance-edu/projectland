@@ -8,3 +8,31 @@
     top:0;
   }
 }
+.project:hover .tag {
+  padding:1px 10px;
+  width:initial;
+  color:rgb(30,40,55);
+  top:4.4px;
+}
+.project:hover .tagHeader {
+  display:inline-block;
+  font-size:12px;
+  transition:0.3s;
+  margin-right:5px;
+}
+.darkBackground:hover {
+  opacity:0;
+}
+.project:hover {
+  transform:translate(-3px,-3px);
+  box-shadow:3px 3px rgb(110,240,255);
+}
+.projectAltForm .project:hover h2 {
+  flex:0;
+  margin:0;
+  padding:0;
+  border:0;
+}
+.projectAltForm .project:hover .projectDesc {
+  flex:1;
+}

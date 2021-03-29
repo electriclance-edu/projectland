@@ -11,4 +11,41 @@
     margin-right:0;
     margin-top:10px;
   }
+  #featuredProject h1 {
+    font-size:25px;
+    line-height:30px;
+  }
+}
+@media screen and (max-width:600px) {
+  .featuredProject {
+    display:inline-block;
+    height:100%;
+    overflow:hidden;
+    max-height:300px;
+    padding:0;
+  }
+  .featuredProject .info {
+    display:inline-block;
+    height:auto;
+    position:relative;
+    padding-bottom:30px;
+    width:100%;
+    left:0;
+  }
+  .featuredProject h1 {
+    margin-bottom:160px;
+    text-align:center;
+  }
+  .featuredProject > img {
+    top:40px;
+    left:50%;
+    transform:translatex(-50%);
+    border-radius:20px;
+  }
+  .featuredProject > div:last-child {
+    display:none;
+  }
+  .featuredProject .projectDesc {
+    -webkit-line-clamp:4;
+  }
 }
