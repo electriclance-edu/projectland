@@ -26,7 +26,7 @@ ProjectData.rawProjectData = [
   {
     name:"Dead People Arriving Places",
     startDate:"23/2/2020",
-    endDate:"ongoing",
+    endDate:"/4/2020",
     description:"Three friends running a pitstop in the middle of galactic nowhere.",
     completeness:"5",
     tags:"art,story",
@@ -120,7 +120,7 @@ ProjectData.rawProjectData = [
     link:"https://docs.google.com/document/d/1BwzwAxvnyR_qhXu614D2qTXRmjGWLHbPyBZpDe1g2wM/edit?usp=sharing"
   },
   {
-    name:"Hurezu Kalii",
+    name:"Satose (Hurezu Kalii)",
     startDate:"~26/2/2021",
     endDate:"ongoing",
     description:"A terrible conlang. But a pretty good name generator. (name subject to change)",
@@ -326,7 +326,7 @@ ProjectData.rawProjectData = [
   {
     name:"Da Estorya",
     startDate:"8/3/2021",
-    endDate:"ongoing",
+    endDate:"/3/2021",
     description:"A little writing experiment where one person writes a page, then the second writes the next, then back to the first person, and so on.",
     completeness:"10",
     tags:"story,mostly-text",
@@ -410,7 +410,7 @@ ProjectData.rawProjectData = [
   {
     name:"Eevolutoon Simulator: Reborn",
     startDate:"3/29/2021",
-    endDate:"ongoing",
+    endDate:"/3/2021",
     description:"A new go at trying to simulate evolution one and a half years later.",
     completeness:"0",
     tags:"website,game",
@@ -444,7 +444,7 @@ ProjectData.rawProjectData = [
     link:"><><"
   },
   {
-    name:"Kimispeak",
+    name:"Wewercian (Kimispeak)",
     startDate:"2/21/2021",
     endDate:"ongoing",
     description:"Kimi constructs a conlang.",
@@ -454,5 +454,17 @@ ProjectData.rawProjectData = [
     image:"none",
     creators:"kimi",
     link:"https://docs.google.com/document/d/113L1eyBsbKiHyJ0cEfCoS-gWzyeDcFOOSGzpXgl5380/edit?usp=sharing"
+  },
+  {
+    name:"The Museum Unintelligible",
+    startDate:"//2020",
+    endDate:"//2020",
+    description:"Please visit the Museum.",
+    completeness:"100",
+    tags:"art,website",
+    effort:"1",
+    image:"museumUnintelligible",
+    creators:"kimi",
+    link:"https://kimidom.github.io/The-Museum-Unintelligible/index.html"
   }
 ]
